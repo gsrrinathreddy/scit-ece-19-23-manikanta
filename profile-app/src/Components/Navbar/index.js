@@ -55,7 +55,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            MANIKANTA GALIPELLI
+            MANIKANTA 
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -115,7 +115,7 @@ function Navbar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-                <Link to={page}>
+                <Link to={page} style={{textDecoration:"none"}}>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}

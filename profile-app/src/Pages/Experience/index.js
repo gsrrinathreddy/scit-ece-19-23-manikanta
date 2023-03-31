@@ -1,7 +1,7 @@
 export default function Experience(){
     return(
 <>
-<h5>Experience of MANIKANTA</h5>
+<h5>FRESHER</h5>
 </>    
     )
     
