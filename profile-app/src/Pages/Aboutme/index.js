@@ -1,6 +1,23 @@
 import { Typography } from '@mui/material';
+import {useState,useEffect} from 'react';
+import axios from 'axios';
 
-export default function Aboutume(){
+export default function Aboutme(){
+const [loader,setLoader] = useState(true);
+    const [aboutme,setAboutme] = useState(null);
+
+    const connectToServer = async  () => axios.get('http://localhost:9000/aboutme')
+                                            .then(res=>{
+                                        
+                                                console.log(res.data);
+                                                setAboutme(res.data);
+                                                setLoader(false)
+                                            }).catch(err=>console.log(err))
+useEffect(()=>{
+   connectToServer();
+},[])
+
+
     return(
         <>
 <Typography>Name: MANIKANTA</Typography>
